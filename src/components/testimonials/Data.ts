@@ -1,6 +1,6 @@
-import Image1 from "../../assets/images/testimonial1.png";
-import Image2 from "../../assets/images/testimonial2.png";
-import Image3 from "../../assets/images/testimonial3.png";
+import Image1 from "../../assets/testimonial1.png";
+import Image2 from "../../assets/testimonial2.png";
+import Image3 from "../../assets/testimonial3.png";
 import { StaticImageData } from "next/image";
 
 interface TestimonialData {

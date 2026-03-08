@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
+import Image from "next/image";
+
 const Testimonials: React.FC = () => {
   return (
     <section className="testimonial container section" id="testimonials">
@@ -42,7 +44,7 @@ const Testimonials: React.FC = () => {
         {Data.map(({ id, image, title, description }) => {
           return (
             <SwiperSlide className="testimonial_card" key={id}>
-              <img src={image.src} alt="" className="testimonial_img" />
+              <Image src={image} alt="" className="testimonial_img" />
               <h3 className="testimonial_name">{title}</h3>
               <p className="testimonial_description">{description}</p>
             </SwiperSlide>

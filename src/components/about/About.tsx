@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/images/about.jpeg";
+import AboutImg from "../../assets/about.jpeg";
+import Image from "next/image";
 import Info from "./Info";
 
 const About: React.FC = () => {
@@ -11,7 +12,7 @@ const About: React.FC = () => {
       <span className="section_subtitle">My introduction</span>
 
       <div className="about_container container grid">
-        <img src={AboutImg.src} alt="" className="about_img" />
+        <Image src={AboutImg} alt="" className="about_img" />
 
         <div className="about_data">
           <Info />

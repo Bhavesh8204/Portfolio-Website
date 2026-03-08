@@ -13,9 +13,9 @@ const Qualification: React.FC = () => {
   return (
     <section className="qualification section">
       <h2 className="section_title">Qualification</h2>
-      <span className="section_subtitle">My personel journey</span>
+      <span className="section_subtitle">My personal journey</span>
 
-      <div className="qualificatin_container container">
+      <div className="qualification_container container">
         <div className="qualification_tabs">
           <div
             className={
@@ -52,7 +52,7 @@ const Qualification: React.FC = () => {
           >
             <div className="qualification_data ">
               <div className="margin-left">
-                <h3 className="qualification_title">Frontend Devlopment</h3>
+                <h3 className="qualification_title">Frontend Development</h3>
                 <span className="qualification_subtitle">
                   Tops Technologies
                 </span>
@@ -115,7 +115,7 @@ const Qualification: React.FC = () => {
             <div className="qualification_data">
               <div className="margin-left">
                 <h3 className="qualification_title">
-                  Frontend Devlopment Trainee
+                  Frontend Development Trainee
                 </h3>
                 <span className="qualification_subtitle">
                   Tops Technologies

@@ -65,7 +65,7 @@ const Services: React.FC = () => {
           <div>
             <i className="uil uil-arrow services_icon"></i>
             <h3 className="services_title">
-              Frontend <br /> Devlopment
+              Frontend <br /> Development
             </h3>
           </div>
 
@@ -92,7 +92,7 @@ const Services: React.FC = () => {
                 className="uil uil-times services_modal-close"
               ></i>
 
-              <h3 className="services_modal-title">Frontend Devlopment</h3>
+              <h3 className="services_modal-title">Frontend Development</h3>
               <p className="services_modal-description">
                 A frontend developer provides services focused on the
                 client-side development of websites and web applications. They

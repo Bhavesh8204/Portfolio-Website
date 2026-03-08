@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { projectsData, projectsNav } from "./Data";
 import WorksItems from "./WorksItems";
 import { StaticImageData } from "next/image";
@@ -14,17 +14,15 @@ interface Project {
 
 const Works: React.FC = () => {
   const [item, setItem] = useState<{ name: string }>({ name: "all" });
-  const [projects, setProjects] = useState<Project[]>([]);
   const [active, setActive] = useState<number>(0);
 
-  useEffect(() => {
+  const projects = useMemo(() => {
     if (item.name === "all") {
-      setProjects(projectsData);
+      return projectsData;
     } else {
-      const newProjects = projectsData.filter((project) => {
+      return projectsData.filter((project) => {
         return project.category.toLowerCase() === item.name;
       });
-      setProjects(newProjects);
     }
   }, [item]);
 

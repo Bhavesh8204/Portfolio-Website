@@ -1,7 +1,6 @@
 import React from "react";
-import "./skills.css";
 import Frontend from "./Frontend";
-import Backend from "./Backend";
+import "./skills.css";
 
 const Skills: React.FC = () => {
   return (
@@ -11,7 +10,7 @@ const Skills: React.FC = () => {
 
       <div className="skills_container container grid">
         <Frontend />
-        <Backend />
+        {/* <Backend /> */}
       </div>
     </section>
   );

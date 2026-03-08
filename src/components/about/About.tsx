@@ -1,8 +1,5 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/about.jpeg";
-import Image from "next/image";
-import Info from "./Info";
 
 const About: React.FC = () => {
   const CV = "/Bhavesh-CV.pdf";
@@ -11,18 +8,31 @@ const About: React.FC = () => {
       <h2 className="section_title">About Me</h2>
       <span className="section_subtitle">My introduction</span>
 
-      <div className="about_container container grid">
-        <Image src={AboutImg} alt="" className="about_img" />
+      <div className="about_container container text-center">
+        {/* <Image src={AboutImg} alt="" className="about_img" /> */}
 
         <div className="about_data">
-          <Info />
+          {/* <Info /> */}
 
           <p className="about_description">
-            My name is Bhavesh Jalandhara. I have been developing my skills in
-            web designing and development for 10 months now, gaining experience
-            with various frontend technologies such as HTML, CSS, JavaScript,
-            jQuery, Bootstrap, and React.js. I am a quick learner, always eager
-            to explore new technologies and tools.
+            Hi, I'm Bhavesh Jalandhara, a passionate Front-End Developer with
+            over 2 years of experience building modern, responsive, and scalable
+            web applications. I specialize in creating high-performance user
+            interfaces using technologies like React.js, Next.js, TypeScript,
+            Tailwind CSS, and Material UI.
+          </p>
+          <p className="about_description">
+            I enjoy transforming ideas and designs into clean, efficient, and
+            user-friendly digital experiences. Throughout my journey, I have
+            worked on various real-world projects including event management
+            platforms, election systems, real estate portals, accounting
+            platforms, and AI-based applications, focusing on performance
+            optimization, responsive design, and seamless API integrations.
+          </p>
+          <p className="about_description">
+            I am always eager to learn new technologies, improve my development
+            skills, and build innovative web solutions that deliver real value
+            to users and businesses.
           </p>
 
           <a href={CV} download="" className="button button-flex">

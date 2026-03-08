@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer_container container">
-        <h1 className="footer_title">Bhavesh</h1>
+        <h1 className="footer_title">Bhavesh Jalandhara</h1>
 
         <ul className="footer_list">
           <li>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
         </div>
 
         <span className="footer_copy">
-          Copyright © 2024 by Bhavesh Jalandhara | All Rights Reserved.
+          Copyright © 2026 by Bhavesh Jalandhara | All Rights Reserved.
         </span>
       </div>
     </footer>

@@ -4,10 +4,11 @@ const Data: React.FC = () => {
   return (
     <div className="home_data">
       <h1 className="home_title">Bhavesh Jalandhara </h1>
-      <h3 className="home_subtitle">Front-End Devloper</h3>
+      <h3 className="home_subtitle">Front End Developer</h3>
       <p className="home_description">
-        I'm a creative front-end developer based in Ahmedabad, and I'm very
-        passionate and dedicated to my work.
+        Passionate Front-End Developer based in Ahmedabad with 2+ years of
+        experience building modern, responsive, and scalable web applications
+        using React.js, Next.js, and modern UI technologies.
       </p>
 
       <a href="#contact" className="button button-flex">

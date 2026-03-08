@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 
 const Header: React.FC = () => {
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
     <header className="header">
       <nav className="nav container">
         <a href="index.html" className="nav_logo">
-          Bhavesh
+          Bhavesh Jalandhara
         </a>
 
         <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                 <i className="uil uil-file-alt nav_icon"></i> Skills
               </a>
             </li>
-            <li className="nav_item">
+            {/* <li className="nav_item">
               <a
                 href="#services"
                 onClick={() => setActiveNav("#services")}
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               >
                 <i className="uil uil-briefcase-alt nav_icon"></i> Services
               </a>
-            </li>
+            </li> */}
             <li className="nav_item">
               <a
                 href="#portfolio"

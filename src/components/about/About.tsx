@@ -14,7 +14,7 @@ const About: React.FC = () => {
         <div className="about_data">
           {/* <Info /> */}
 
-          <p className="about_description">
+          <p className="about_description ">
             Hi, I'm Bhavesh Jalandhara, a passionate Front-End Developer with
             over 2 years of experience building modern, responsive, and scalable
             web applications. I specialize in creating high-performance user

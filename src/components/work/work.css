@@ -31,6 +31,20 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.work_card:hover .work_title {
+  color: var(--title-color-dark, var(--title-color));
+  text-decoration: underline;
 }
 
 .work_img {
@@ -42,7 +56,7 @@
 .work_title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-0-5);
+  margin-bottom: 0;
 }
 
 .work_button {

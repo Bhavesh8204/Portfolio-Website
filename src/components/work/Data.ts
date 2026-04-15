@@ -9,6 +9,7 @@ interface Project {
   image: StaticImageData;
   title: string;
   category: string;
+  link: string;
 }
 
 interface NavItem {
@@ -21,25 +22,29 @@ export const projectsData: Project[] = [
     image: Work1,
     title: "Women Business Club",
     category: "next.js",
+    link: "https://www.womensbusiness.club/",
   },
   {
     id: 2,
     image: Work2,
     title: "PROP971",
     category: "next.js",
+    link: "https://www.prop971.com/",
   },
   {
     id: 3,
     image: Work3,
     title: "SmartBallot",
     category: "next.js",
+    link: "https://app-admin.smartballotapp.com",
   },
 
   {
     id: 4,
     image: Work4,
-    title: "AI Business Coach",
+    title: "AEM Billing",
     category: "next.js",
+    link: "https://aemdb.co.uk",
   },
 ];
 

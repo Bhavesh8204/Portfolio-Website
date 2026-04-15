@@ -15,7 +15,7 @@ const Services: React.FC = () => {
       <h2 className="section_title">Services</h2>
       <span className="section_subtitle">What i offer</span>
 
-      <div className="services_container container grid">
+      <div className="services_container grid">
         <div className="services_content">
           <div>
             <i className="uil uil-web-grid services_icon"></i>

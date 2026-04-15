@@ -9,7 +9,7 @@ const Qualification: React.FC = () => {
       <h2 className="section_title">Qualification</h2>
       <span className="section_subtitle">My personal journey</span>
 
-      <div className="qualification_container container">
+      <div className="qualification_container">
         <div className="qualification_sections">
           <div className="qualification_content qualification_content-active">
             {/* Front End Developer - Creative Hustlers */}

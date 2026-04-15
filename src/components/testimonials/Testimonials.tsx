@@ -18,7 +18,7 @@ import Image from "next/image";
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="testimonial container section" id="testimonials">
+    <section className="testimonial section" id="testimonials">
       <h2 className="section_title">My clients say</h2>
       <span className="section_subtitle">Testimonial</span>
 

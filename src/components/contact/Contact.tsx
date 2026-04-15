@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
       <h2 className="section_title">Get in touch</h2>
       <span className="section_subtitle">Contact Me</span>
 
-      <div className="contact_container container grid">
+      <div className="contact_container grid">
         <div className="contact_content">
           <h3 className="contact_title">Talk to me</h3>
 
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="contact_content">
+        {/* <div className="contact_content">
           <h3 className="contact_title">Write me your project</h3>
 
           <form ref={form} onSubmit={sendEmail} className="contact_form">
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
               </svg>
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

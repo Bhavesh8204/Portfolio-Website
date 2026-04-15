@@ -4,7 +4,7 @@ import "./footer.css";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="footer_container container">
+      <div className="footer_container">
         <h1 className="footer_title">Bhavesh Jalandhara</h1>
 
         <ul className="footer_list">
@@ -23,12 +23,30 @@ const Footer: React.FC = () => {
 
         <div className="footer_social">
           <a
-            href="https://www.facebook.com/"
+            href="https://www.linkedin.com/in/bhavesh8204"
             className="footer_social-link"
             target="_blank"
             rel="noreferrer"
           >
-            <i className="bx bxl-facebook"></i>
+            <i className="uil uil-linkedin"></i>
+          </a>
+
+          <a
+            href="https://github.com/Bhavesh8204"
+            className="footer_social-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="uil uil-github-alt"></i>
+          </a>
+
+          <a
+            href="https://www.upwork.com/freelancers/bhavesh8204"
+            className="footer_social-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bx bxl-upwork"></i>
           </a>
 
           <a
@@ -38,15 +56,6 @@ const Footer: React.FC = () => {
             rel="noreferrer"
           >
             <i className="uil uil-instagram"></i>
-          </a>
-
-          <a
-            href="https://twitter.com/"
-            className="footer_social-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="bx bxl-twitter"></i>
           </a>
         </div>
 

@@ -23,7 +23,7 @@ const Works: React.FC = () => {
         })}
       </div> */}
 
-      <div className="work_container container grid">
+      <div className="work_container grid">
         {projectsData.map((proj) => {
           return <WorksItems item={proj} key={proj.id} />;
         })}

@@ -3,12 +3,13 @@ import React from "react";
 const Data: React.FC = () => {
   return (
     <div className="home_data">
-      <h1 className="home_title">Bhavesh Jalandhara </h1>
-      <h3 className="home_subtitle">Front End Developer</h3>
+      <h1 className="home_title">Bhavesh Jalandhara</h1>
+      <h3 className="home_subtitle">Front-End Developer</h3>
       <p className="home_description">
-        Passionate Front-End Developer based in Ahmedabad with 2+ years of
-        experience building modern, responsive, and scalable web applications
-        using React.js, Next.js, and modern UI technologies.
+        Results-driven Front-End Developer with 2+ years of experience building
+        responsive, scalable web applications using React.js, Next.js, and
+        TypeScript. Proven track record of improving page performance by up to
+        40% and delivering seamless user experiences.
       </p>
 
       <a href="#contact" className="button button-flex">

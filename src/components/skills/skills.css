@@ -1,39 +1,48 @@
 .skills_container {
-  /* grid-template-columns: repeat(2, 350px); */
-  grid-template-columns: repeat(1, 350px);
-  column-gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   justify-content: center;
 }
 
 .skills_content {
   background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 2rem 4rem;
-  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.skills_content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .skills_title {
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   text-align: center;
-  margin-bottom: var(--mb-1-5);
+  margin-bottom: var(--mb-1);
+  color: var(--title-color);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.5rem;
 }
 
 .skills_box {
   display: flex;
-  justify-content: center;
-  column-gap: 2.5rem;
+  justify-content: flex-start;
 }
 
 .skills_group {
   display: grid;
-  align-items: flex-start;
-  row-gap: 1rem;
+  row-gap: 0.75rem;
+  width: 100%;
 }
 
 .skills_data {
   display: flex;
   column-gap: 0.5rem;
+  align-items: center;
 }
 
 .skills .bx-badge-check {
@@ -42,21 +51,18 @@
 }
 
 .skills_name {
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   line-height: 18px;
-}
-
-.skills_level {
-  font-size: var(--tiny-font-size);
+  color: var(--title-color);
 }
 
 /* BREAKPOINTS */
 
 @media screen and (max-width: 992px) {
   .skills_container {
-    grid-template-columns: max-content;
-    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 
@@ -66,16 +72,12 @@
   }
 
   .skills_content {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 }
 
 @media screen and (max-width: 350px) {
-  .skills_box {
-    column-gap: 1.25rem;
-  }
-
   .skills_name {
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
   }
 }

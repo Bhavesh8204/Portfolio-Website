@@ -1,28 +1,23 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
+import { Project } from "./Data";
 
 interface WorkItemProps {
-  item: {
-    id: number;
-    image: StaticImageData;
-    title: string;
-    category: string;
-    link: string;
-  };
+  item: Project;
+  onClick: () => void;
 }
 
-const WorksItems: React.FC<WorkItemProps> = ({ item }) => {
+const WorksItems: React.FC<WorkItemProps> = ({ item, onClick }) => {
   return (
-    <a
-      href={item.link}
-      target="_blank"
-      rel="noreferrer"
-      className="work_card"
-      key={item.id}
-    >
-      <Image src={item.image} alt="" className="work_img" />
+    <div className="work_card" onClick={onClick} key={item.id}>
+      <div className="work_img-wrapper">
+        <Image src={item.image} alt={item.title} className="work_img" />
+      </div>
       <h3 className="work_title">{item.title}</h3>
-    </a>
+      <span className="work_button">
+        View Details <i className="bx bx-right-arrow-alt work_button-icon"></i>
+      </span>
+    </div>
   );
 };
 

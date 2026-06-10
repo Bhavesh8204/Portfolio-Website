@@ -59,17 +59,20 @@
 }
 
 .home_img {
-  background: url(../../assets/profile.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   box-shadow: inset 0 0 0 10px rgb(255 255 255 / 30%);
   order: 1;
   justify-content: center;
   width: 300px;
   border-radius: 10%;
   height: 300px;
+  overflow: hidden;
   /* animation: portfolio_animation 8s ease-in-out infinite 1s; */
+}
+
+.home_profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @keyframes portfolio_animation {

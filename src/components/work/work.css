@@ -13,6 +13,7 @@
   font-weight: var(--font-medium);
   border-radius: 0.5rem;
   text-transform: capitalize;
+  transition: all 0.3s ease;
 }
 
 .work_item:hover {
@@ -41,24 +42,37 @@
 
 .work_card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .work_card:hover .work_title {
   color: var(--title-color-dark, var(--title-color));
-  text-decoration: underline;
+}
+
+.work_img-wrapper {
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: var(--mb-1);
+  width: 295px;
+  height: 180px;
 }
 
 .work_img {
-  width: 295px;
-  border-radius: 1rem;
-  margin-bottom: var(--mb-1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work_card:hover .work_img {
+  transform: scale(1.05);
 }
 
 .work_title {
   font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: 0;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
+  color: var(--title-color);
 }
 
 .work_button {
@@ -67,6 +81,8 @@
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+  font-weight: var(--font-medium);
+  transition: color 0.2s;
 }
 
 .work_button-icon {
@@ -74,13 +90,133 @@
   transition: 0.4s;
 }
 
-.work_button:hover .work_button-icon {
+.work_card:hover .work_button {
+  color: var(--title-color-dark);
+}
+
+.work_card:hover .work_button-icon {
   transform: translateX(0.25rem);
 }
 
 .active-work {
   background-color: var(--title-color);
   color: var(--container-color);
+}
+
+/* WORK MODAL STYLING */
+.work_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.work_modal.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work_modal-content {
+  width: 650px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.work_modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.work_modal-close:hover {
+  color: var(--title-color-dark);
+}
+
+.work_modal-title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.25rem;
+  color: var(--title-color-dark);
+}
+
+.work_modal-subtitle {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--mb-1-5);
+}
+
+.work_modal-description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.5;
+}
+
+.work_modal-list {
+  row-gap: 0.75rem;
+  margin-bottom: var(--mb-2);
+}
+
+.work_modal-item {
+  display: flex;
+  column-gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.work_modal-icon {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  margin-top: 0.15rem;
+}
+
+.work_modal-text {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.work_modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--mb-2);
+}
+
+.work_modal-badge {
+  background-color: var(--body-color);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: var(--tiny-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.work_modal-button {
+  margin-top: 0.5rem;
 }
 
 /* BREAKPOINTS */
@@ -94,18 +230,19 @@
     padding: 1rem;
   }
 
-  .work_img {
-    margin-bottom: 0.75rem;
-  }
-
-  .work_title {
-    margin-bottom: 0.25rem;
+  .work_img-wrapper {
+    width: 260px;
+    height: 160px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .work_container {
     grid-template-columns: max-content;
+  }
+
+  .work_modal-content {
+    padding: 2.5rem 1.5rem 1.5rem;
   }
 }
 
@@ -114,8 +251,9 @@
     grid-template-columns: 1fr;
   }
 
-  .work_img {
+  .work_img-wrapper {
     width: 100%;
+    height: 200px;
   }
 }
 

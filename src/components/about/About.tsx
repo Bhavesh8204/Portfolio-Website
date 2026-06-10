@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <span className="section_subtitle">My introduction</span>
 
       <div className="about_container text-center">
-        {/* <Image src={AboutImg} alt="" className="about_img" /> */}
+        {/* <Image src={AboutImg} alt="Bhavesh Jalandhara" className="about_img" /> */}
 
         <div className="about_data">
           {/* <Info /> */}

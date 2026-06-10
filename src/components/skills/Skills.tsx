@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
       <h2 className="section_title">Skills</h2>
       <span className="section_subtitle">My technical level</span>
 
-      <div className="skills_container container grid">
+      <div className="skills_container grid">
         {skillCategories.map((category, idx) => (
           <div className="skills_content" key={idx}>
             <h3 className="skills_title">{category.title}</h3>

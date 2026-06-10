@@ -3,6 +3,61 @@
 import React, { useState } from "react";
 import "./qualification.css";
 
+interface ExperienceItem {
+  role: string;
+  company: string;
+  location: string;
+  date: string;
+  achievements: string[];
+}
+
+interface EducationItem {
+  degree: string;
+  institution: string;
+  location: string;
+  date: string;
+  description: string;
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    role: "Front-End Developer",
+    company: "Creative Hustlers",
+    location: "Ahmedabad, India",
+    date: "Mar 2024 – Present",
+    achievements: [
+      "Engineered and delivered 5+ production web applications using React.js, Next.js, and TypeScript, meeting all project milestones on time.",
+      "Reduced page load times by ~35% through code splitting, lazy loading, and Next.js SSR/SSG optimizations.",
+      "Built a reusable component library of 30+ UI components, cutting feature development time by 25% across projects.",
+      "Converted 10+ Figma mockups into pixel-perfect, cross-browser-compatible interfaces with 100% design fidelity.",
+      "Improved application scalability by architecting modular, maintainable front-end codebases following best practices.",
+    ],
+  },
+  {
+    role: "Front-End Developer Intern",
+    company: "TOPS Infosolutions Pvt Ltd",
+    location: "Ahmedabad, India",
+    date: "Jan 2023 – Mar 2024",
+    achievements: [
+      "Built 3+ front-end web applications with React.js, gaining hands-on production experience during an intensive internship.",
+      "Integrated RESTful APIs enabling seamless frontend-backend data communication, reducing fetch errors by 20%.",
+      "Built fully responsive, mobile-first UI components compatible across all major browsers and screen sizes.",
+      "Deployed projects on Vercel and resolved 50+ bugs, improving overall performance and usability by 30%.",
+    ],
+  },
+];
+
+const education: EducationItem[] = [
+  {
+    degree: "Bachelor of Commerce (B.Com)",
+    institution: "The Maharaja Sayajirao University of Baroda",
+    location: "Vadodara, India",
+    date: "2022",
+    description:
+      "Completed undergraduate studies with a focus on commerce, business management, and financial accounting.",
+  },
+];
+
 const Qualification: React.FC = () => {
   const [toggleState, setToggleState] = useState<number>(2); // Default to Experience tab
 
@@ -15,7 +70,7 @@ const Qualification: React.FC = () => {
       <h2 className="section_title">Qualification</h2>
       <span className="section_subtitle">My personal journey</span>
 
-      <div className="qualification_container container">
+      <div className="qualification_container">
         <div className="qualification_tabs">
           <div
             className={
@@ -51,24 +106,30 @@ const Qualification: React.FC = () => {
                 : "qualification_content"
             }
           >
-            {/* Bachelor of Commerce - MSU Baroda */}
-            <div className="qualification_data">
-              <div>
-                <h3 className="qualification_title">
-                  Bachelor of Commerce (B.Com)
-                </h3>
-                <span className="qualification_subtitle">
-                  The Maharaja Sayajirao University of Baroda, Vadodara
-                </span>
-                <div className="qualification_calendar">
-                  <i className="uil uil-calendar-alt"></i> 2022
+            <div className="qualification_timeline">
+              {education.map((item, index) => (
+                <div className="qualification_item" key={index}>
+                  <div className="qualification_marker">
+                    <span className="qualification_dot"></span>
+                    {index !== education.length - 1 && (
+                      <span className="qualification_line"></span>
+                    )}
+                  </div>
+                  <div className="qualification_card">
+                    <span className="qualification_date">{item.date}</span>
+                    <h3 className="qualification_card-title">{item.degree}</h3>
+                    <h4 className="qualification_card-company">
+                      {item.institution}{" "}
+                      <span className="qualification_location">
+                        • {item.location}
+                      </span>
+                    </h4>
+                    <p className="qualification_card-desc">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-
-              <div>
-                <span className="qualification_rounder"></span>
-              </div>
-              <div></div>
+              ))}
             </div>
           </div>
 
@@ -80,44 +141,32 @@ const Qualification: React.FC = () => {
                 : "qualification_content"
             }
           >
-            {/* Front End Developer - Creative Hustlers */}
-            <div className="qualification_data">
-              <div>
-                <h3 className="qualification_title">Front-End Developer</h3>
-                <span className="qualification_subtitle">
-                  Creative Hustlers - Ahmedabad
-                </span>
-                <div className="qualification_calendar">
-                  <i className="uil uil-calendar-alt"></i> Mar 2024 - Present
+            <div className="qualification_timeline">
+              {experiences.map((item, index) => (
+                <div className="qualification_item" key={index}>
+                  <div className="qualification_marker">
+                    <span className="qualification_dot"></span>
+                    {index !== experiences.length - 1 && (
+                      <span className="qualification_line"></span>
+                    )}
+                  </div>
+                  <div className="qualification_card">
+                    <span className="qualification_date">{item.date}</span>
+                    <h3 className="qualification_card-title">{item.role}</h3>
+                    <h4 className="qualification_card-company">
+                      {item.company}{" "}
+                      <span className="qualification_location">
+                        • {item.location}
+                      </span>
+                    </h4>
+                    <ul className="qualification_card-bullets">
+                      {item.achievements.map((ach, aIdx) => (
+                        <li key={aIdx}>{ach}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-
-              <div>
-                <span className="qualification_rounder"></span>
-                <span className="qualification_line"></span>
-              </div>
-              <div></div>
-            </div>
-
-            {/* Front-End Developer Intern - TOPS Infosolutions */}
-            <div className="qualification_data">
-              <div></div>
-
-              <div>
-                <span className="qualification_rounder"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification_title">
-                  Front-End Developer Intern
-                </h3>
-                <span className="qualification_subtitle">
-                  TOPS Infosolutions Pvt Ltd - Ahmedabad
-                </span>
-                <div className="qualification_calendar">
-                  <i className="uil uil-calendar-alt"></i> Jan 2023 - Mar 2024
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

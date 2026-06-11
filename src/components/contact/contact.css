@@ -14,8 +14,9 @@
 
 .contact_info {
   display: grid;
-  row-gap: 1rem;
-  grid-template-columns: 300px;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
 }
 
 .contact_card {
@@ -122,6 +123,7 @@
   }
 
   .contact_info {
+    grid-template-columns: 300px;
     justify-content: center;
   }
 

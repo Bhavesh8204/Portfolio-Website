@@ -22,8 +22,8 @@
 }
 
 .work_container {
-  grid-template-columns: repeat(2, max-content);
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -53,7 +53,7 @@
   overflow: hidden;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
-  width: 295px;
+  width: 100%;
   height: 180px;
 }
 
@@ -223,6 +223,7 @@
 
 @media screen and (max-width: 992px) {
   .work_container {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 
@@ -231,14 +232,13 @@
   }
 
   .work_img-wrapper {
-    width: 260px;
     height: 160px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .work_container {
-    grid-template-columns: max-content;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .work_modal-content {
@@ -252,7 +252,6 @@
   }
 
   .work_img-wrapper {
-    width: 100%;
     height: 200px;
   }
 }

@@ -53,8 +53,7 @@ const education: EducationItem[] = [
     institution: "The Maharaja Sayajirao University of Baroda",
     location: "Vadodara, India",
     date: "2022",
-    description:
-      "Completed undergraduate studies with a focus on commerce, business management, and financial accounting.",
+    description: "",
   },
 ];
 

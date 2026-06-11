@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
               <span className="contact_card-data">8141825382</span>
 
               <a
-                href="https://api.whatsapp.com/send?phone=8141825382&text=Hello, more information!"
+                href="https://api.whatsapp.com/send?phone=918141825382&text=Hello%20Bhavesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
                 className="contact_button"
               >
                 Write me{" "}
